@@ -338,7 +338,7 @@ class RlProcess:
                     s, emb_s = env.init_env(user_id=user_id)
                     a_w = ddpg.choose_action_weight(emb_s)
                     # add randomness to action selection for exploration
-                    a_w = np.clip(np.random.normal(a_w, explore_var), 0, 1)
+                    a_w = np.random.normal(a_w, explore_var)
                     s_, emb_s_, r = env.step(user_id=user_id,
                                              in_state=s,
                                              in_a_w=a_w,
@@ -367,7 +367,7 @@ class RlProcess:
                             # print(s, s_emb, s_flag)
                             a_w = ddpg.choose_action_weight(emb_s)
                             # add randomness to action selection for exploration
-                            a_w = np.clip(np.random.normal(a_w, explore_var), 0, 1)
+                            a_w = np.random.normal(a_w, explore_var)
                             # print(a_w.shape)
                             s_, emb_s_, r = env.step(user_id=user_id,
                                                      in_state=s,
