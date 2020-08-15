@@ -193,7 +193,7 @@ class RecommendENV:
             else:
                 negative_list = nega_items_list
                 if nega_num - len(negative_list) >= len(supp_nega_cluster_items):
-                    negative_list += supp_nega_cluster_items
+                    negative_list += list(supp_nega_cluster_items)
                 else:
                     negative_list = constant_sample(supp_nega_cluster_items, nega_num - len(negative_list))
         else:

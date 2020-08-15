@@ -1,5 +1,5 @@
 # coding: utf-8 -*- DQN model
-# A method that replaces DDPG in TDDPG-Rec with DQN, while retains other components  the same as that in TDDPG-Rec.
+# A method that replaces DDPG in TDDPG-Rec with DQN, while retains other components the same as that in TDDPG-Rec.
 # Select the normalized item vector with the max Q-value as policy vector
 import tensorflow as tf
 import numpy as np
