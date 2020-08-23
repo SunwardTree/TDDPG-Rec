@@ -5,7 +5,7 @@ The code to reproduce the experimental results for "A Text-based Deep Reinforcem
 The data pre-processing codes is also included. You could download Amazon data from *[here](http://snap.stanford.edu/data/amazon/productGraph/categoryFiles)*, and run the amazon.py.
 
 ## Runtime Environment
-The code has been tested under Windows 10(version 1909) and Ubuntu 16.04 with TensorFlow 1.14.0 and Python 3.6.8.
+The code has been tested under Windows 10 and Ubuntu 16.04 with TensorFlow 1.14.0 and Python 3.6.8.
 
 Support independent training with CPU and joint training with CPU and GPU when CUDA is available.
 
