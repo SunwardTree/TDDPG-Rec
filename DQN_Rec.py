@@ -377,9 +377,7 @@ class RlProcess:
                                                          in_a=a_,
                                                          train_list=train_list,
                                                          nega_list=nega_list)
-                            # Increase stability
-                            if r > 0:
-                                dqn.store_transition(emb_s, item_vec, a_, r, emb_s_)
+                            dqn.store_transition(emb_s, item_vec, a_, r, emb_s_)
 
                             s = s_
                             emb_s = emb_s_

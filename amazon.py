@@ -530,7 +530,7 @@ if __name__ == '__main__':
     # 'Digital_Music' 'Beauty' 'Clothing_Shoes_and_Jewelry'
     data_name = 'Digital_Music'
     # glove mf
-    reduce_dim_method = 'mf'
+    reduce_dim_method = 'glove'
     emb_size = 100  # experimental set: 'Digital_Music：100' 'Beauty：100' 'Clothing_Shoes_and_Jewelry：200'
     alpha = 0.5
     cluster_num = 10  # experimental set: 'Digital_Music：10' 'Beauty：10' 'Clothing_Shoes_and_Jewelry：15'

@@ -374,9 +374,7 @@ class RlProcess:
                                                      in_a_w=a_w,
                                                      select_size=c_select_size,
                                                      train_percent=o_train_percent)
-                            # Increase stability
-                            if r > 0:
-                                ddpg.store_transition(emb_s, a_w, r, emb_s_)
+                            ddpg.store_transition(emb_s, a_w, r, emb_s_)
                             s = s_
                             emb_s = emb_s_
                             once_show_r += r
