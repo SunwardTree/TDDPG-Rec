@@ -1,5 +1,5 @@
 # TDDPG-Rec
-The code to reproduce the experimental results for *["A Text-based Deep Reinforcement Learning Framework for Interactive Recommendation"](https://arxiv.org/pdf/2004.06651.pdf) (In the 24th European Conference on Artificial Intelligence, ECAI 2020).
+The code to reproduce the experimental results for ["A Text-based Deep Reinforcement Learning Framework for Interactive Recommendation"](https://arxiv.org/pdf/2004.06651.pdf) (In the 24th European Conference on Artificial Intelligence, ECAI 2020).
 
 ## Datasets
 The data pre-processing codes is also included. You could download Amazon data from *[here](http://snap.stanford.edu/data/amazon/productGraph/categoryFiles)*, and run the amazon.py.
@@ -36,3 +36,16 @@ python DQN_Rec.py
 ``` 
 
 You can modify the source codes to run other datasets. For MF-class methods, you should change the input by modify 'method' from 'glove' to 'mf'.
+
+Please cite this article as:
+```
+@inproceedings{wang2020text,
+	title={A Text-based Deep Reinforcement Learning Framework for Interactive Recommendation},
+	author={Chaoyang Wang and Zhiqiang Guo and Jianjun Li and Peng Pan and Guohui Li},
+	booktitle={Proceedings of the 24th European Conference on Artificial Intelligence},
+	pages={537--544},
+	year={2020},
+	doi = {10.3233/FAIA200136},
+	publisher={IOS Press}
+}
+```
