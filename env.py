@@ -52,11 +52,12 @@ class RecommendENV:
         else:
             in_state = h_train_items
             while len(in_state) < self.state_num:
-                one_add = np.random.randint(self.data_shape[1])
-                if one_add not in in_state:
-                    in_state.append(one_add)
+                in_state.append(-1)
             for i_item in in_state:
-                state_emd[0][t_count * self.state_dim:(t_count + 1) * self.state_dim] = self.item_vector[i_item]
+                if i_item == -1:
+                    state_emd[0][t_count * self.state_dim:(t_count + 1) * self.state_dim] = self.item_vector[i_item]
+                else:
+                    state_emd[0][t_count * self.state_dim:(t_count + 1) * self.state_dim] = self.item_vector[i_item]
                 t_count += 1
         return in_state, state_emd
 
@@ -74,11 +75,12 @@ class RecommendENV:
         else:
             in_state = h_train_items
             while len(in_state) < self.state_num:
-                one_add = np.random.randint(self.data_shape[1])
-                if one_add not in in_state:
-                    in_state.append(one_add)
+                in_state.append(-1)
             for i_item in in_state:
-                state_emd[0][t_count * self.state_dim:(t_count + 1) * self.state_dim] = self.item_vector[i_item]
+                if i_item == -1:
+                    state_emd[0][t_count * self.state_dim:(t_count + 1) * self.state_dim] = self.item_vector[i_item]
+                else:
+                    state_emd[0][t_count * self.state_dim:(t_count + 1) * self.state_dim] = self.item_vector[i_item]
                 t_count += 1
         return in_state, state_emd
 
