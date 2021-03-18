@@ -55,7 +55,7 @@ class RecommendENV:
                 in_state.append(-1)
             for i_item in in_state:
                 if i_item == -1:
-                    state_emd[0][t_count * self.state_dim:(t_count + 1) * self.state_dim] = self.item_vector[i_item]
+                    state_emd[0][t_count * self.state_dim:(t_count + 1) * self.state_dim] = np.zeros(self.item_vector[0].shape)
                 else:
                     state_emd[0][t_count * self.state_dim:(t_count + 1) * self.state_dim] = self.item_vector[i_item]
                 t_count += 1
@@ -78,7 +78,7 @@ class RecommendENV:
                 in_state.append(-1)
             for i_item in in_state:
                 if i_item == -1:
-                    state_emd[0][t_count * self.state_dim:(t_count + 1) * self.state_dim] = self.item_vector[i_item]
+                    state_emd[0][t_count * self.state_dim:(t_count + 1) * self.state_dim] = np.zeros(self.item_vector[0].shape)
                 else:
                     state_emd[0][t_count * self.state_dim:(t_count + 1) * self.state_dim] = self.item_vector[i_item]
                 t_count += 1
